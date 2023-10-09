@@ -52,6 +52,16 @@ type ImageStore struct {
 	commit      bool
 }
 
+// DeleteContainerImageManifest implements types.ImageStore.
+func (*ImageStore) DeleteContainerImageManifest(repo string, reference string, detectCollision bool) error {
+	panic("unimplemented")
+}
+
+// GetContainerImage implements types.ImageStore.
+func (*ImageStore) GetContainerImage(repo string, reference string) ([]byte, godigest.Digest, string, error) {
+	panic("unimplemented")
+}
+
 func (is *ImageStore) RootDir() string {
 	return is.rootDir
 }

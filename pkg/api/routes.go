@@ -848,6 +848,17 @@ func (rh *RouteHandler) DeleteManifest(response http.ResponseWriter, request *ht
 	response.WriteHeader(http.StatusAccepted)
 }
 
+// DeleteContainerImage godoc
+// @Summary Delete container image
+// @Description Delete a container image manifest given a reference
+// @Accept  json
+// @Produce json
+// @Param   name     			path    string     true        "repository name"
+// @Param   reference     path    string     true        "image reference"
+// @Success 200 {string} string	"ok"
+// @Router /v2/{name}/manifests/{reference} [delete].
+func (rh *RouteHandler) DeleteContainerImage(response http.ResponseWriter, request *http.Request) {}
+
 // CheckBlob godoc
 // @Summary Check image blob/layer
 // @Description Check an image's blob/layer given a digest
